@@ -48,8 +48,11 @@ sudo nano OoklaServer.properties
 2.Edit the following values. To save a file in Nano text editor, press Ctrl+O, then press Enter to confirm. To exit the file, Press Ctrl+X
 --
 OoklaServer.useIPv6 = true
+
 OoklaServer.allowedDomains = *.ookla.com, *.speedtest.net
+
 OoklaServer.enableAutoUpdate = true
+
 OoklaServer.ssl.useLetsEncrypt = true
 --
 Note: The above process (SSL) only begins after the server has been registered and reviewed by Ookla
@@ -84,20 +87,29 @@ sudo nano /etc/systemd/system/rc-local.service
 
 2.Then add the following content to it & Save and close the file. To save a file in Nano text editor, press Ctrl+O, then press Enter to confirm. To exit the file, Press Ctrl+X.
 --
+
 [Unit]
  Description=/etc/rc.local Compatibility
+ 
  ConditionPathExists=/etc/rc.local
 
 [Service]
  Type=forking
+ 
  ExecStart=/etc/rc.local start
+ 
  TimeoutSec=0
+ 
  StandardOutput=tty
+ 
  RemainAfterExit=yes
+ 
  SysVStartPriority=99
 
 [Install]
+
  WantedBy=multi-user.target
+
 
  3.Next, we have to create the /etc/rc.local file as newer versions of Ubuntu doesn’t come with it
  --
