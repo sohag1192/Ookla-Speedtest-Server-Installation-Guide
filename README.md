@@ -23,19 +23,19 @@ Ookla Speedtest Server Installation Guide
 
 1.Download the install script
 --
-wget https://install.speedtest.net/ooklaserver/ooklaserver.sh
+    wget https://install.speedtest.net/ooklaserver/ooklaserver.sh
 
 2.Update script permissions to allow installation
 --
-chmod a+x ooklaserver.sh
+    chmod a+x ooklaserver.sh
 
 3.Install the server daemon
 --
-./ooklaserver.sh install
+    ./ooklaserver.sh install
 
 4.Now, check if the Speedtest Server Daemon has automatically started by opening 
 -
-http://Ookla-Speedtest-Server-IP:8080
+     http://Ookla-Speedtest-Server-IP:8080
 
 ---
 
@@ -43,25 +43,22 @@ http://Ookla-Speedtest-Server-IP:8080
 
 1.Open the Speedtest Server configuration file
 --
-sudo nano OoklaServer.properties
+    sudo nano OoklaServer.properties
 
 2.Edit the following values. To save a file in Nano text editor, press Ctrl+O, then press Enter to confirm. To exit the file, Press Ctrl+X
 --
-OoklaServer.useIPv6 = true
-
-OoklaServer.allowedDomains = *.ookla.com, *.speedtest.net
-
-OoklaServer.enableAutoUpdate = true
-
-OoklaServer.ssl.useLetsEncrypt = true
+    OoklaServer.useIPv6 = true
+    OoklaServer.allowedDomains = *.ookla.com, *.speedtest.net
+    OoklaServer.enableAutoUpdate = true
+    OoklaServer.ssl.useLetsEncrypt = true
 --
 Note: The above process (SSL) only begins after the server has been registered and reviewed by Ookla
 
 3.Restart the Speedtest Server service
 --
-sudo ./ooklaserver.sh restart
+    sudo ./ooklaserver.sh restart
 
-4.Now, test the server using Speedtest Server Tester – https://www.speedtest.net/host-tester
+4.Now, test the server using Speedtest Server Tester –    https://www.speedtest.net/host-tester
 
 5.Enter the IP Address of your server or domain name followed by port 8080. Example: speedtest.domain.com:8080 or 100.64.100.1:8080. Click on Submit.
 
@@ -83,64 +80,64 @@ It is very essential for the Speedtest Server Daemon to start automatically afte
 
 1.Create the rc.local service file-
 --
-sudo nano /etc/systemd/system/rc-local.service
+     sudo nano /etc/systemd/system/rc-local.service
 
 2.Then add the following content to it & Save and close the file. To save a file in Nano text editor, press Ctrl+O, then press Enter to confirm. To exit the file, Press Ctrl+X.
 --
 
-[Unit]
- Description=/etc/rc.local Compatibility
+      [Unit]
+     Description=/etc/rc.local Compatibility
  
- ConditionPathExists=/etc/rc.local
+     ConditionPathExists=/etc/rc.local
 
-[Service]
- Type=forking
+    [Service]
+    Type=forking
  
- ExecStart=/etc/rc.local start
+    ExecStart=/etc/rc.local start
  
- TimeoutSec=0
+    TimeoutSec=0
+    
+     StandardOutput=tty
  
- StandardOutput=tty
+    RemainAfterExit=yes
  
- RemainAfterExit=yes
+     SysVStartPriority=99
  
- SysVStartPriority=99
+     [Install]
 
-[Install]
-
- WantedBy=multi-user.target
+    WantedBy=multi-user.target
 
 
  3.Next, we have to create the /etc/rc.local file as newer versions of Ubuntu doesn’t come with it
  --
- printf '%s\n' '#!/bin/bash' 'exit 0' | sudo tee -a /etc/rc.local
+    printf '%s\n' '#!/bin/bash' 'exit 0' | sudo tee -a /etc/rc.local
  
  4.Then add execute permission to /etc/rc.local file.
  --
-sudo chmod +x /etc/rc.local
+    sudo chmod +x /etc/rc.local
 
 5.After that, enable the service on system boot:
 --
-sudo systemctl enable rc-local
+    sudo systemctl enable rc-local
 
 6.Now start the service and check its status:
 --
-sudo systemctl start rc-local.service
-sudo systemctl status rc-local.service
+    sudo systemctl start rc-local.service
+    sudo systemctl status rc-local.service
 
 7.Next, we have to edit the rc.local file
 --
-sudo nano /etc/rc.local
+    sudo nano /etc/rc.local
 
 8.Then add the Ookla Speedtest Server Script for auto start. To save a file in Nano text editor, press Ctrl+O, then press Enter to confirm. To exit the file, Press Ctrl+X
 
-su root -c '/root/OoklaServer --daemon'
+    su root -c '/root/OoklaServer --daemon'
 
 Note: change the username and directory path based on your actual instalalation details
 --
 9.Now, reboot the server and check if the Speedtest Server Daemon has automatically started by opening 
 ---
-http://Ookla-Speedtest-Server-IP:8080. 
+    http://Ookla-Speedtest-Server-IP:8080. 
 
 
 ----
