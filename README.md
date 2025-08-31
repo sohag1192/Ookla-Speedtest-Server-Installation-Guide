@@ -1,5 +1,6 @@
-# Ookla-Speedtest-Server-Installation-Guide
-Ookla Speedtest Server Installation Guide
+# Ookla-Speedtest-Server-Installation-Guide [![Hits](https://hits.sh/github.com/sohag1192/Ookla-Speedtest-Server-Installation-Guide.svg?view=today-total)](https://hits.sh/github.com/sohag1192/Ookla-Speedtest-Server-Installation-Guide/)
+
+Ookla Speedtest Server Installation Guide 
 
 # ******Important points to keep in mind before installation of Ookla Speedtest Server –******
 
