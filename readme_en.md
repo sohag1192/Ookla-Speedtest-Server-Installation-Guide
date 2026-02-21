@@ -1,11 +1,17 @@
-
 # 🚀 Ookla Speedtest Server Installation Guide
 
 [![Hits](https://hits.sh/github.com/sohag1192/Ookla-Speedtest-Server-Installation-Guide.svg?view=today-total)](https://hits.sh/github.com/sohag1192/Ookla-Speedtest-Server-Installation-Guide/)
 [![Platform](https://img.shields.io/badge/Platform-Ubuntu%20Linux-orange.svg)](https://ubuntu.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A comprehensive, step-by-step guide to preparing, installing, configuring, and maintaining an official Ookla Speedtest Server on an Ubuntu machine. 
+> ⚡ **Quick Install (Unofficial Shell Script)** > If you want to skip the manual setup and automate the installation process, you can use the custom automated shell script provided in this repository:
+> ```bash
+> wget https://raw.githubusercontent.com/sohag1192/Ookla-Speedtest-Server-Installation-Guide/main/install_speedtest.sh
+> chmod +x install_speedtest.sh
+> sudo ./install_speedtest.sh
+> ```
+
+A comprehensive, step-by-step guide to preparing, installing, configuring, and maintaining an official Ookla Speedtest Server manually on an Ubuntu machine. 
 
 ---
 
