@@ -10,17 +10,17 @@ A comprehensive, step-by-step guide to preparing, installing, configuring, and m
 ---
 
 ## 📑 Table of Contents
-- [Important Prerequisites](#important-prerequisites)
-- [A. Prepare Ubuntu Server](#a-prepare-ubuntu-server)
-- [B. Install Ookla Speedtest Server](#b-install-ookla-speedtest-server)
-- [C. Configure & Test](#c-configure--test)
-- [D. Submit for Review](#d-submit-for-review)
-- [E. Enable Auto-Start on Boot](#e-enable-auto-start-on-boot)
-- [References](#-references)
+- [⚠️ Important Prerequisites](#important-prerequisites)
+- [🖥️ A. Prepare Ubuntu Server](#a-prepare-ubuntu-server)
+- [📦 B. Install Ookla Speedtest Server](#b-install-ookla-speedtest-server)
+- [⚙️ C. Configure & Test](#c-configure--test)
+- [📤 D. Submit for Review](#d-submit-for-review)
+- [🔄 E. Enable Auto-Start on Boot](#e-enable-auto-start-on-boot)
+- [🔗 References](#references)
 
 ---
 
-## ⚠️ Important Prerequisites
+## Important Prerequisites
 Before beginning the installation, ensure your setup meets the following criteria:
 
 1. **Hardware Requirements**: Minimum Recommended Configuration is a Quad Core Processor, 8GB RAM, 256GB SSD, and a 1Gbps NIC. *(For large networks, invest in good hardware with 10G NICs).*
@@ -198,7 +198,7 @@ Reboot your server. Once it is back online, open a browser and go to `http://<Yo
 
 ---
 
-## 🔗 References
+## References
 
 * [OoklaServer Installation for Linux/Unix](https://support.ookla.com/hc/en-us/articles/234578528-OoklaServer-Installation-Linux-Unix)
 * [How to Enable HTTPS/TLS Support](https://support.ookla.com/hc/en-us/articles/360001087752-How-do-I-enable-HTTPS-TLS-support-)
@@ -207,4 +207,5 @@ Reboot your server. Once it is back online, open a browser and go to `http://<Yo
 ---
 
 *If you found this guide helpful, don't forget to ⭐ this repository!*
+
 
